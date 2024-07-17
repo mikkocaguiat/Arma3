@@ -18,6 +18,6 @@ _arma3CfgWeaponsArray pushBack (configName _x);
 
 private _tab = _x call jn_fnc_arsenal_itemType;
 
-[_tab, _x, 1] call jn_fnc_arsenal_addItem;
+[_tab, _x, 100] call jn_fnc_arsenal_addItem;
 
 } forEach _arma3CfgWeaponsArray;
