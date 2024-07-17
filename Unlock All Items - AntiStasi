@@ -1,0 +1,23 @@
+// Run as Server - Create an array of items based on the standard equipment list found in Arma 3: CfgWeapons Weapons
+
+private _cfgWeapons = configFile >> "CfgWeapons";
+
+private _arma3CfgWeaponsArray = [];
+
+{
+
+if (isClass _x) then {
+
+_arma3CfgWeaponsArray pushBack (configName _x);
+
+};
+
+} forEach configProperties [_cfgWeapons, "true", true];
+
+{
+
+private _tab = _x call jn_fnc_arsenal_itemType;
+
+[_tab, _x, 1] call jn_fnc_arsenal_addItem;
+
+} forEach _arma3CfgWeaponsArray;
