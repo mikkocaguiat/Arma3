@@ -1,0 +1,6 @@
+// Add Money, HR
+//Personal Money
+[100000] call A3A_fnc_resourcesPlayer; 
+ 
+//[50,100000] HR, Faction
+[0,0] remoteExec ["A3A_fnc_resourcesFIA",2];
